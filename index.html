@@ -1,36 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Personal Website</title>
-
-  <!-- Link to CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- Navigation Bar -->
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="resume.html">Resume</a>
-    <a href="skills.html">Skills</a>
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-badge"></span>
+        <span class="brand-name">My Portfolio</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="skills.html">Skills</a>
+      </div>
+    </div>
   </nav>
 
-  <!-- Main Content -->
-  <div class="container">
-    <h1>Welcome</h1>
+  <header class="hero">
+    <div class="hero-card">
+      <div class="kicker">
+        <span class="kicker-line"></span>
+        <span>Student • Creator • Problem Solver</span>
+      </div>
 
-    <p>
-      Welcome to my personal website. This site was created to introduce who I am,
-      highlight my academic background, and showcase the skills I am developing.
-    </p>
+      <h1>Welcome</h1>
 
-    <p>
-      Each section of this website provides information about my interests,
-      achievements, and experiences in a clear and professional format.
-    </p>
-  </div>
+      <p class="subtitle">
+        This website introduces who I am, highlights my academic background, and
+        showcases the skills I’m building. Use the navigation above to explore my
+        About Me, Resume, and Skills pages.
+      </p>
 
+      <div class="cta-row">
+        <a class="btn btn-primary" href="about.html">About Me</a>
+        <a class="btn btn-ghost" href="resume.html">View Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h2>Quick Highlights</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Interests</h3>
+          <p>Technology, design, problem-solving, and learning new skills.</p>
+        </div>
+
+        <div class="card">
+          <h3>Strengths</h3>
+          <p>Organization, creativity, teamwork, and attention to detail.</p>
+        </div>
+
+        <div class="card">
+          <h3>Goals</h3>
+          <p>Build stronger coding/design skills and take on meaningful projects.</p>
+        </div>
+      </div>
+
+      <footer>
+        © <span id="year"></span> Your Name • Hosted on GitHub Pages
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
