@@ -6,6 +6,25 @@
   <title>Evan Sherman-Chan | Resume</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+  <script>
+  // Fade-in on scroll
+  const revealItems = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  revealItems.forEach((el) => observer.observe(el));
+</script>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
