@@ -1,37 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Personal Website</title>
-
-  <!-- Link to CSS -->
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sigil-style Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <header class="hero">
+    <!-- Background image layer (replace the URL) -->
+    <div class="hero__bg" aria-hidden="true"></div>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="resume.html">Resume</a>
-    <a href="skills.html">Skills</a>
-  </nav>
+    <!-- Texture + vignette -->
+    <div class="hero__vignette" aria-hidden="true"></div>
 
-  <!-- Main Content -->
-  <div class="container">
-    <h1>Welcome</h1>
+    <!-- Grid + rings -->
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__rings" aria-hidden="true">
+      <span class="ring ring--a"></span>
+      <span class="ring ring--b"></span>
+    </div>
 
-    <p>
-      Welcome to my personal website. This site was created to introduce who I am,
-      highlight my academic background, and showcase the skills I am developing.
-    </p>
+    <!-- Purple accent block -->
+    <div class="hero__accent" aria-hidden="true"></div>
 
-    <p>
-      Each section of this website provides information about my interests,
-      achievements, and experiences in a clear and professional format.
-    </p>
-  </div>
+    <!-- Content -->
+    <nav class="nav">
+      <div class="nav__brand">
+        <span class="dot"></span><span class="dot dot--purple"></span>
+        <span class="nav__brandText">SIGIL</span>
+      </div>
+      <div class="nav__links">
+        <a href="about.html">ABOUT</a>
+        <a href="resume.html">RESUME</a>
+        <a href="skills.html">SKILLS</a>
+      </div>
+    </nav>
 
+    <div class="hero__content">
+      <div class="hero__left">
+        <div class="kicker">
+          <span class="kicker__pill"></span>
+          <span class="kicker__text">GRAPHICS DESIGNER & ESPORTS STRATEGIST</span>
+        </div>
+
+        <h1 class="title">
+          SIGIL<br />
+          <span class="title__sub">TALENT</span>
+        </h1>
+
+        <p class="desc">
+          A clean, high-contrast portfolio inspired by esports banners: bold type,
+          sharp geometry, and neon accents.
+        </p>
+
+        <div class="ctaRow">
+          <a class="btn" href="about.html">VIEW ABOUT</a>
+          <a class="btn btn--ghost" href="resume.html">VIEW RESUME</a>
+        </div>
+      </div>
+
+      <aside class="hero__right">
+        <div class="card">
+          <div class="card__row">
+            <div class="label">SIGIL ARTS</div>
+            <div class="bar"></div>
+          </div>
+
+          <div class="card__row card__row--spaced">
+            <div class="big">SIGIL</div>
+            <div class="small">PORTFOLIO</div>
+          </div>
+
+          <div class="card__meta">
+            <div>RGB <span class="mono">133 0 255</span></div>
+            <div>HEX <span class="mono">#8500FF</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="section">
+      <h2>Featured</h2>
+      <div class="grid3">
+        <div class="tile">
+          <h3>Project 1</h3>
+          <p>Add a short description and a screenshot link.</p>
+        </div>
+        <div class="tile">
+          <h3>Project 2</h3>
+          <p>Add a short description and a screenshot link.</p>
+        </div>
+        <div class="tile">
+          <h3>Project 3</h3>
+          <p>Add a short description and a screenshot link.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Your Name • Built with HTML/CSS • Hosted on GitHub Pages</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
