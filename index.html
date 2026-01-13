@@ -6,6 +6,25 @@
   <title>Evan Sherman-Chan | Home</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+  <script>
+  // Fade-in on scroll
+  const revealItems = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  revealItems.forEach((el) => observer.observe(el));
+</script>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -26,8 +45,9 @@
   <main class="container">
     <section class="hero">
       <div class="hero-card">
-        <div class="eyebrow">Personal Website</div>
-        <h1 class="hero-title">Hi, I’m Evan.</h1>
+        <h1 class="hero-title">Evan Sherman-Chan</h1>
+<p class="hero-subtitle">Personal Website</p>
+
         <p class="hero-subtitle">Student • New York City • Browning School</p>
 
         <p>
