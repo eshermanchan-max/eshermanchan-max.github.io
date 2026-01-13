@@ -1,13 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Resume</title>
-
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evan Sherman-Chan | Resume</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- your content goes here -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">E</span>
+        <span class="brand-text">Evan Sherman-Chan</span>
+      </a>
+
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link active" href="resume.html">Resume</a>
+        <a class="nav-link" href="skills.html">Skills</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-title">
+      <h1>Resume</h1>
+      <p class="muted">
+        Education, coursework, projects, volunteer work, and extracurricular activities.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="resume-top card">
+        <div>
+          <h2 class="resume-name">Evan Sherman-Chan</h2>
+          <p class="muted">New York City • Student</p>
+        </div>
+        <div class="resume-contact">
+          <p class="muted small">Email</p>
+          <a class="text-link" href="mailto:your.email@example.com">your.email@example.com</a>
+          <!-- Replace with your real email -->
+        </div>
+      </div>
+
+      <div class="cards two-col">
+        <article class="card">
+          <h2>Education</h2>
+          <div class="item">
+            <h3>The Browning School</h3>
+            <p class="muted">New York City • Grade: (add your grade)</p>
+            <ul class="clean-list">
+              <li><span class="dot"></span> Relevant coursework: (add classes)</li>
+              <li><span class="dot"></span> Academic achievements: (add highlights)</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Skills (brief)</h2>
+          <ul class="tags">
+            <li>HTML/CSS</li>
+            <li>Problem-solving</li>
+            <li>Research</li>
+            <li>Writing</li>
+            <li>Design</li>
+            <li>Teamwork</li>
+          </ul>
+          <p class="muted small">More details on the Skills page.</p>
+          <a class="btn btn-small" href="skills.html">Go to Skills</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <p class="muted">A few projects that show what I can do (school-appropriate).</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Bahamas Report / Research Project</h3>
+          <p class="muted small">Research • Data • Writing</p>
+          <p>
+            A research-style report focused on fieldwork/data and communicating results clearly.
+            (Replace this description with what you actually did.)
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Design / Creative Work</h3>
+          <p class="muted small">Graphic design • Branding • Iteration</p>
+          <p>
+            Created digital designs and improved them through feedback and revisions.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Technology Project</h3>
+          <p class="muted small">Computers • Troubleshooting • Building</p>
+          <p>
+            Hands-on experience building and understanding computer components and performance.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="cards two-col">
+        <article class="card">
+          <h2>Volunteer Work</h2>
+          <ul class="clean-list">
+            <li><span class="dot"></span> (Add volunteer activity) — (what you did)</li>
+            <li><span class="dot"></span> (Add volunteer activity) — (impact)</li>
+          </ul>
+          <p class="muted small">If you don’t have this yet, you can keep 1 placeholder or remove the section.</p>
+        </article>
+
+        <article class="card">
+          <h2>Extracurricular Activities</h2>
+          <ul class="clean-list">
+            <li><span class="dot"></span> Swimming</li>
+            <li><span class="dot"></span> (Add club/interest)</li>
+            <li><span class="dot"></span> (Add activity)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Evan Sherman-Chan</p>
+      <p class="muted">Resume Page</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
