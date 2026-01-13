@@ -1,13 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Skills</title>
-
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evan Sherman-Chan | Skills</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- your content goes here -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">E</span>
+        <span class="brand-text">Evan Sherman-Chan</span>
+      </a>
+
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="resume.html">Resume</a>
+        <a class="nav-link active" href="skills.html">Skills</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-title">
+      <h1>Skills</h1>
+      <p class="muted">
+        A clear list of my technical, academic, and personal skills.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="skills-grid">
+        <article class="card">
+          <h2>Technical Skills</h2>
+          <ul class="clean-list">
+            <li><span class="dot"></span> Building computers (parts, performance, troubleshooting)</li>
+            <li><span class="dot"></span> Designing (graphics, layout, iteration)</li>
+            <li><span class="dot"></span> Blender / 3D tools (modeling basics)</li>
+            <li><span class="dot"></span> HTML & CSS (website structure and styling)</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Academic Skills</h2>
+          <ul class="clean-list">
+            <li><span class="dot"></span> Writing papers with clear structure</li>
+            <li><span class="dot"></span> Research and organizing information</li>
+            <li><span class="dot"></span> Data/analysis thinking (graphs, patterns, conclusions)</li>
+            <li><span class="dot"></span> Studying efficiently and preparing for tests</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Personal Skills</h2>
+          <ul class="clean-list">
+            <li><span class="dot"></span> Teamwork and collaboration</li>
+            <li><span class="dot"></span> Problem-solving mindset</li>
+            <li><span class="dot"></span> Time management</li>
+            <li><span class="dot"></span> Persistence and attention to detail</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Skill Snapshot</h2>
+        <p class="muted">Quick, readable labels (easy for a teacher/rubric).</p>
+      </div>
+
+      <div class="card">
+        <div class="chip-row">
+          <span class="chip">Computer Building</span>
+          <span class="chip">Graphic Design</span>
+          <span class="chip">Blender (3D)</span>
+          <span class="chip">HTML/CSS</span>
+          <span class="chip">Research</span>
+          <span class="chip">Writing</span>
+          <span class="chip">Teamwork</span>
+          <span class="chip">Problem Solving</span>
+          <span class="chip">Time Management</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Evan Sherman-Chan</p>
+      <p class="muted">Skills Page</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
