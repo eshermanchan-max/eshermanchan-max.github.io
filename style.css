@@ -4,7 +4,7 @@
 */
 
 :root{
-  --bg1: #d4f1ff;   /* white */
+  --bg1: #d1ecff;   /* white */
   --bg2: #ffffff;   /* dark gray */
 
   --text: #0f172a;        /* near-black */
@@ -267,3 +267,4 @@ p{ margin: 0 0 12px; }
     transition: none;
   }
 }
+
