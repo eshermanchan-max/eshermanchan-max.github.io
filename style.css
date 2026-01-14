@@ -369,3 +369,46 @@ p{ margin: 0 0 12px; }
   .resume-top{ flex-direction: column; }
   .resume-contact{ text-align: left; }
 }
+
+.resume-top{ flex-direction: column; }
+.resume-contact{ text-align: left; }
+}
+/* ===== Hover lift for cards/panels ===== */
+.card, .panel{
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card:hover, .panel:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(2, 6, 23, 0.14);
+}
+
+/* Optional: slightly lift nav pills too */
+.nav-link{
+  transition: 160ms ease;
+}
+
+/* ===== Scroll fade-in animation ===== */
+.reveal{
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 650ms ease, transform 650ms ease;
+  will-change: opacity, transform;
+}
+
+.reveal.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect reduced motion settings */
+@media (prefers-reduced-motion: reduce){
+  .reveal{
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .card, .panel{
+    transition: none;
+  }
+}
