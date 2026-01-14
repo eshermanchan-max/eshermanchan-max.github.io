@@ -4,8 +4,8 @@
 */
 
 :root{
-  --bg1: #ffffff;   /* white */
-  --bg2: #d4f1ff;   /* dark gray */
+  --bg1: #d4f1ff;   /* white */
+  --bg2: #ffffff;   /* dark gray */
 
   --text: #0f172a;        /* near-black */
   --muted: #475569;       /* slate */
