@@ -148,5 +148,26 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+    <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const revealItems = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    revealItems.forEach((el) => observer.observe(el));
+  });
+</script>
+
 </body>
 </html>
