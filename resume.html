@@ -6,24 +6,6 @@
   <title>Evan Sherman-Chan | Resume</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-  <script>
-  // Fade-in on scroll
-  const revealItems = document.querySelectorAll(".reveal");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          observer.unobserve(entry.target); // animate once
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
-
-  revealItems.forEach((el) => observer.observe(el));
-</script>
 
 <body>
   <header class="site-header">
@@ -43,21 +25,20 @@
   </header>
 
   <main class="container">
-    <section class="page-title">
+    <section class="page-title reveal">
       <h1>Resume</h1>
-      
     </section>
 
-    <section class="section">
+    <section class="section reveal">
       <div class="resume-top card">
         <div>
           <h2 class="resume-name">Evan Sherman-Chan</h2>
           <p class="muted">10th grader at The Browning School</p>
         </div>
+
         <div class="resume-contact">
           <p class="muted small">Email</p>
           <a class="text-link" href="mailto:eshermanchan@browning.edu">eshermanchan@browning.edu</a>
-          <!-- Replace with your real email -->
         </div>
       </div>
 
@@ -68,8 +49,8 @@
             <h3>The Browning School</h3>
             <p class="muted">10th Grade</p>
             <ul class="clean-list">
-              <li><span class="dot"></span> At the Browning School, I take many classes. Relevant Coursework: Chemistry, Biology, World History, Math</li>
-              <li><span class="dot"></span> Achievements: Eligibility to publish a lab report, Achieved the highest trophies in Clash Royale, Did Graphics Design for big esports organizations</li>
+              <li><span class="dot"></span> Relevant Coursework: Chemistry, Biology, World History, Math</li>
+              <li><span class="dot"></span> Achievements: Eligibility to publish a lab report; Design work for esports organizations</li>
             </ul>
           </div>
         </article>
@@ -90,52 +71,76 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section reveal">
       <div class="section-header">
         <h2>Projects</h2>
-        <p class="muted">Some of my Projects.</p>
+        <p class="muted">Click a project to open its page with photos/videos.</p>
       </div>
 
       <div class="cards">
-        <article class="card">
+
+        <!-- CLICKABLE PROJECT CARD -->
+        <a class="card project-click" href="bahamas.html">
           <h3>Bahamas Report</h3>
           <p class="muted small">Research + Writing</p>
           <p>
-            Lab Report where my group and I studied how pH levels affect the biodiversity of areas in the Bahamas.
-         
+            Lab report where my group and I studied how pH levels affect biodiversity in areas of the Bahamas.
           </p>
-        </article>
+          <p class="muted small project-open">Open →</p>
+        </a>
 
-        <article class="card">
+        <!-- CLICKABLE PROJECT CARD -->
+        <a class="card project-click" href="design.html">
           <h3>Design / Creative Work</h3>
           <p class="muted small">Graphic design</p>
           <p>
-            Created Graphics for Esports Organizations and Professionals
+            Created graphics for esports organizations and professionals.
           </p>
-        </article>
+          <p class="muted small project-open">Open →</p>
+        </a>
 
-        <article class="card">
+        <!-- CLICKABLE PROJECT CARD -->
+        <a class="card project-click" href="computer.html">
           <h3>Building a Computer</h3>
-          <p class="muted small">Puzzle solving</p>
+          <p class="muted small">Troubleshooting</p>
           <p>
-           I spent a weekend building a computer with my uncle. This taught me how to solve puzzles and troubleshoot problems.
+            Built a computer with my uncle, which taught me how to troubleshoot problems and work through challenges.
           </p>
-        </article>
+          <p class="muted small project-open">Open →</p>
+        </a>
+
       </div>
     </section>
 
-
-        <article class="card">
-          <h2>Extracurricular Activities</h2>
-          <ul class="clean-list">
-            <li><span class="dot"></span> Swimming</li>
-            <li><span class="dot"></span> Varsity Track and Field</li>
-            <li><span class="dot"></span> JV Soccer</li>
-          </ul>
-        </article>
-      </div>
+    <section class="section reveal">
+      <article class="card">
+        <h2>Extracurricular Activities</h2>
+        <ul class="clean-list">
+          <li><span class="dot"></span> Swimming</li>
+          <li><span class="dot"></span> Varsity Track and Field</li>
+          <li><span class="dot"></span> JV Soccer</li>
+        </ul>
+      </article>
     </section>
   </main>
 
+  <script>
+    // Fade-in on scroll (your same idea, but moved to bottom so it works reliably)
+    const revealItems = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    revealItems.forEach((el) => observer.observe(el));
+  </script>
 </body>
 </html>
