@@ -432,5 +432,32 @@ p{ margin: 0 0 12px; }
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 14px;
 }
+/* Clickable project cards should NOT look like links */
+a.project-click,
+a.project-click:visited{
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Make clickable cards behave like equal-height cards */
+.project-click{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Push “Open →” to the bottom */
+.project-open{
+  margin-top: auto;
+  font-weight: 700;
+  color: var(--blue2);
+}
+
+/* Nice focus ring for keyboard users (optional but professional) */
+a.project-click:focus-visible{
+  outline: 3px solid rgba(37,99,235,0.35);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
 
 }
