@@ -74,38 +74,44 @@
     <section class="section reveal">
       <div class="section-header">
         <h2>Projects</h2>
-        <p class="muted">Click a project to open its page with photos/videos.</p>
+        <p class="muted">Click a project to open its page (photos/videos).</p>
       </div>
 
       <div class="cards">
 
-        <!-- CLICKABLE PROJECT CARD -->
+        <!-- Clickable card -->
         <a class="card project-click" href="bahamas.html">
-          <h3>Bahamas Report</h3>
-          <p class="muted small">Research + Writing</p>
-          <p>
-            Lab report where my group and I studied how pH levels affect biodiversity in areas of the Bahamas.
-          </p>
+          <div>
+            <h3>Bahamas Report</h3>
+            <p class="muted small">Research + Writing</p>
+            <p>
+              Lab report where my group and I studied how pH levels affect biodiversity in areas of the Bahamas.
+            </p>
+          </div>
           <p class="muted small project-open">Open →</p>
         </a>
 
-        <!-- CLICKABLE PROJECT CARD -->
+        <!-- Clickable card -->
         <a class="card project-click" href="design.html">
-          <h3>Design / Creative Work</h3>
-          <p class="muted small">Graphic design</p>
-          <p>
-            Created graphics for esports organizations and professionals.
-          </p>
+          <div>
+            <h3>Design / Creative Work</h3>
+            <p class="muted small">Graphic Design</p>
+            <p>
+              Created graphics for esports organizations and professionals.
+            </p>
+          </div>
           <p class="muted small project-open">Open →</p>
         </a>
 
-        <!-- CLICKABLE PROJECT CARD -->
+        <!-- Clickable card -->
         <a class="card project-click" href="computer.html">
-          <h3>Building a Computer</h3>
-          <p class="muted small">Troubleshooting</p>
-          <p>
-            Built a computer with my uncle, which taught me how to troubleshoot problems and work through challenges.
-          </p>
+          <div>
+            <h3>Building a Computer</h3>
+            <p class="muted small">Troubleshooting</p>
+            <p>
+              Built a computer with my uncle, which taught me how to troubleshoot problems and work through challenges.
+            </p>
+          </div>
           <p class="muted small project-open">Open →</p>
         </a>
 
@@ -125,7 +131,7 @@
   </main>
 
   <script>
-    // Fade-in on scroll (your same idea, but moved to bottom so it works reliably)
+    // Fade-in on scroll (placed at bottom so it always finds elements)
     const revealItems = document.querySelectorAll(".reveal");
 
     const observer = new IntersectionObserver(
