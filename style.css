@@ -123,12 +123,8 @@ p{ margin: 0 0 12px; }
 .small{ font-size: 0.95rem; }
 
 /* Page title */
-.page-title{
-  padding: 28px 0 10px;
-}
-.page-title h1{
-  font-size: clamp(1.8rem, 2.6vw, 2.2rem);
-}
+.page-title{ padding: 28px 0 10px; }
+.page-title h1{ font-size: clamp(1.8rem, 2.6vw, 2.2rem); }
 
 /* Sections */
 .section{ padding: 22px 0 34px; }
@@ -227,9 +223,7 @@ p{ margin: 0 0 12px; }
   border: 1px solid rgba(37,99,235,0.30);
 }
 
-.btn-outline:hover{
-  background: rgba(37,99,235,0.08);
-}
+.btn-outline:hover{ background: rgba(37,99,235,0.08); }
 
 .text-link{
   color: var(--blue2);
@@ -341,9 +335,7 @@ p{ margin: 0 0 12px; }
   font-size: 1.55rem;
   margin-bottom: 4px;
 }
-.resume-contact{
-  text-align: right;
-}
+.resume-contact{ text-align: right; }
 
 /* Footer */
 .site-footer{
@@ -360,19 +352,6 @@ p{ margin: 0 0 12px; }
   padding: 16px 0;
 }
 
-/* Responsive */
-@media (max-width: 900px){
-  .hero{ grid-template-columns: 1fr; }
-  .cards{ grid-template-columns: 1fr; }
-  .two-col{ grid-template-columns: 1fr; }
-  .photo-grid{ grid-template-columns: 1fr; }
-  .resume-top{ flex-direction: column; }
-  .resume-contact{ text-align: left; }
-}
-
-.resume-top{ flex-direction: column; }
-.resume-contact{ text-align: left; }
-}
 /* ===== Hover lift for cards/panels ===== */
 .card, .panel{
   transition: transform 180ms ease, box-shadow 180ms ease;
@@ -381,11 +360,6 @@ p{ margin: 0 0 12px; }
 .card:hover, .panel:hover{
   transform: translateY(-6px);
   box-shadow: 0 22px 45px rgba(2, 6, 23, 0.14);
-}
-
-/* Optional: slightly lift nav pills too */
-.nav-link{
-  transition: 160ms ease;
 }
 
 /* ===== Scroll fade-in animation ===== */
@@ -401,40 +375,19 @@ p{ margin: 0 0 12px; }
   transform: translateY(0);
 }
 
-/* Respect reduced motion settings */
-@media (prefers-reduced-motion: reduce){
-  .reveal{
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-  .card, .panel{
-    transition: none;
-
-     /* Make project cards clickable without looking like blue links */
+/* Make project cards clickable without looking like blue links */
 .project-click{
   display: block;
   text-decoration: none;
   color: inherit;
 }
 
-.project-click .project-open{
-  font-weight: 600;
-}
-
-/* Optional: make hover a bit more obvious on project cards */
-.project-click:hover{
-  transform: translateY(-4px);
-}
-     .media-grid{
+/* Media gallery styling for project pages */
+.media-grid{
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   margin-top: 12px;
-}
-
-@media (max-width: 900px){
-  .media-grid{ grid-template-columns: 1fr; }
 }
 
 .media{
@@ -449,6 +402,28 @@ p{ margin: 0 0 12px; }
   max-height: 520px;
 }
 
+/* Responsive */
+@media (max-width: 900px){
+  .hero{ grid-template-columns: 1fr; }
+  .cards{ grid-template-columns: 1fr; }
+  .two-col{ grid-template-columns: 1fr; }
+  .photo-grid{ grid-template-columns: 1fr; }
+  .media-grid{ grid-template-columns: 1fr; }
+  .resume-top{ flex-direction: column; }
+  .resume-contact{ text-align: left; }
+}
 
+/* Respect reduced motion settings */
+@media (prefers-reduced-motion: reduce){
+  .reveal{
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .card, .panel, .btn, .nav-link{
+    transition: none;
+  }
+  .card:hover, .panel:hover, .btn:hover{
+    transform: none;
   }
 }
