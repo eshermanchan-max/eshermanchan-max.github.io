@@ -426,4 +426,11 @@ p{ margin: 0 0 12px; }
   .card:hover, .panel:hover, .btn:hover{
     transform: none;
   }
+
+   .cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
 }
