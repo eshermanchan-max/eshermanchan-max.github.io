@@ -410,5 +410,22 @@ p{ margin: 0 0 12px; }
   }
   .card, .panel{
     transition: none;
+
+     /* Make project cards clickable without looking like blue links */
+.project-click{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-click .project-open{
+  font-weight: 600;
+}
+
+/* Optional: make hover a bit more obvious on project cards */
+.project-click:hover{
+  transform: translateY(-4px);
+}
+
   }
 }
